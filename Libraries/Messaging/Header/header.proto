@@ -1,0 +1,9 @@
+syntax="proto3";
+import "nanopb.proto";
+
+message Header{
+
+	string arduinoId = 1 [(nanopb).max_size = 20];
+	string sensorId = 2 [(nanopb).max_size = 20];		
+
+}

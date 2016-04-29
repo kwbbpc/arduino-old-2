@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{28DB5084-92BF-482A-900A-278042447C16}</ProjectGuid>
+    <RootNamespace>MessagingTest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\SolutionSettings\SolutionSettings.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\SolutionSettings\SolutionSettings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(SolutionDir)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(Boost);$(ArduinoRoot)Libraries;$(ArduinoRoot)Tests\UnitTests\;$(ArduinoRoot)Libraries\NanoPb\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNITTEST;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <AdditionalDependencies>TestUtilities.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)$(Configuration)\MessagingTest.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Libraries\Encoders\NanoPbCodec.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Messaging\MessageRouter.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Messaging\MessagingConnection.cpp" />
+    <ClCompile Include="..\..\..\Libraries\NanoPB\hasmessages\DiscoverMessage.pb.c" />
+    <ClCompile Include="..\..\..\Libraries\NanoPB\hasmessages\header.pb.c" />
+    <ClCompile Include="..\..\..\Libraries\NanoPB\hasmessages\TemperatureMessage.pb.c" />
+    <ClCompile Include="..\..\..\Libraries\NanoPB\pb_decode.c" />
+    <ClCompile Include="..\..\..\Libraries\NanoPB\pb_encode.c" />
+    <ClCompile Include="..\..\..\Libraries\Serial\test\TestSerial.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Test\TestMessageRouter.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Test\TestSensor.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Test\TestTemperatureSensor.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Utilities\Guid.cpp" />
+    <ClCompile Include="..\..\..\Libraries\Utilities\MessageBuilder.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageRouterTests.cpp" />
+    <ClCompile Include="MessagingConnectionTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Libraries\Encoders\NanoPbCodec.h" />
+    <ClInclude Include="..\..\..\Libraries\Messaging\IMessageRouter.h" />
+    <ClInclude Include="..\..\..\Libraries\Messaging\MessageRouter.h" />
+    <ClInclude Include="..\..\..\Libraries\Messaging\MessagingConnection.h" />
+    <ClInclude Include="..\..\..\Libraries\Messaging\MessagingConnectionForward.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\backupStdBool.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\hasmessages\DiscoverMessage.pb.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\hasmessages\header.pb.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\hasmessages\TemperatureMessage.pb.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\MessageTypeTranslator.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\pb.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\pb_decode.h" />
+    <ClInclude Include="..\..\..\Libraries\NanoPB\pb_encode.h" />
+    <ClInclude Include="..\..\..\Libraries\Sensor\ISensor.h" />
+    <ClInclude Include="..\..\..\Libraries\Sensor\MessageProcessor.h" />
+    <ClInclude Include="..\..\..\Libraries\Sensor\SensorForward.h" />
+    <ClInclude Include="..\..\..\Libraries\Serial\ISerialConnection.h" />
+    <ClInclude Include="..\..\..\Libraries\Serial\test\TestSerial.h" />
+    <ClInclude Include="..\..\..\Libraries\Test\TestMessageRouter.h" />
+    <ClInclude Include="..\..\..\Libraries\Test\TestSensor.h" />
+    <ClInclude Include="..\..\..\Libraries\Test\TestTemperatureSensor.h" />
+    <ClInclude Include="..\..\..\Libraries\Utilities\Guid.h" />
+    <ClInclude Include="..\..\..\Libraries\Utilities\MessageBuilder.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

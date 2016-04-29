@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Temperature">
+      <UniqueIdentifier>{394de259-7ea7-45f8-b60b-313bfd5b1560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header">
+      <UniqueIdentifier>{65e12b8a-1c2b-48d7-9d2e-3a051ca5fc4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NanoPb">
+      <UniqueIdentifier>{2cad5949-460f-42d2-8461-27542d68b15b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Messaging\IMessageRouter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\IParser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\MessageRouter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\NanoPbCodec.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\MessageVersion.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\header.pb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\IEncoder.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\ITemperatureListener.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\temperature.pb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Messaging\TemperatureParser.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NanoPB\pb.h">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NanoPB\pb_common.h">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NanoPB\pb_decode.h">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NanoPB\pb_encode.h">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Messaging\MessageRouter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Messaging\header.pb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Messaging\temperature.pb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Messaging\TemperatureParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NanoPB\pb_common.c">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NanoPB\pb_decode.c">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NanoPB\pb_encode.c">
+      <Filter>Source Files\NanoPb</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Messaging\Temperature\compile.bat">
+      <Filter>Source Files\Temperature</Filter>
+    </None>
+    <None Include="..\..\Messaging\Temperature\temperature.pb">
+      <Filter>Source Files\Temperature</Filter>
+    </None>
+    <None Include="..\..\Messaging\Temperature\temperature.proto">
+      <Filter>Source Files\Temperature</Filter>
+    </None>
+    <None Include="..\..\Messaging\Header\compile.bat">
+      <Filter>Source Files\Header</Filter>
+    </None>
+    <None Include="..\..\Messaging\Header\header.pb">
+      <Filter>Source Files\Header</Filter>
+    </None>
+    <None Include="..\..\Messaging\Header\header.proto">
+      <Filter>Source Files\Header</Filter>
+    </None>
+    <None Include="..\..\Messaging\temperature.pb">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
