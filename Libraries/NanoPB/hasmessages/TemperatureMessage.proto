@@ -1,0 +1,10 @@
+
+#import "header.proto";
+
+syntax = "proto2";
+
+message TemperatureMessage
+{
+	optional float temperatureF = 3;
+	optional string deviceName = 4 [(nanopb).max_size = 40];
+}

@@ -1,0 +1,8 @@
+import "nanopb.proto";
+import "header.proto";
+
+
+message DiscoverMessage
+{
+
+}

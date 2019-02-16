@@ -1,0 +1,1 @@
+#define CODELIB "D:\Code\HAS\Arduino\Libraries"
